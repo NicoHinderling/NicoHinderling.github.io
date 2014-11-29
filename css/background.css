@@ -35,7 +35,7 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: #FF6600;
 }
 
 a:hover,
@@ -279,13 +279,6 @@ header .intro-text {
     padding-bottom: 50px;
 }
 
-header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 22px;
-    font-style: italic;
-    line-height: 22px;
-}
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
@@ -307,8 +300,8 @@ header .intro-text .intro-heading {
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 30px;
         font-style: italic;
-        line-height: 4px;
-    }
+		line-height: 125%;
+	}
 
     header .intro-text .intro-heading {
         margin-bottom: 40px;
@@ -338,7 +331,7 @@ section h2.section-heading {
 
 section h3.section-heading {
     margin-top: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     font-size: 55px;
 }
 
