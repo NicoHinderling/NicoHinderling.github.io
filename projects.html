@@ -68,7 +68,8 @@
 		</div>				
 	</div>				
 
-    <section id="sim">	
+	<!-- Sim Pencil AI Section-->	
+    <div id="sim">	
 	<div class="container page-header">
 		<div class="panel panel-default">
   			<div class="panel-body">
@@ -79,175 +80,159 @@
 				<p> <a href= "http://en.wikipedia.org/wiki/Sim_%28pencil_game%29">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. The objective of Sim Pencil AI was to create a "Computer Player" (<a href= "java/AiPlayer.java">Source Code</a>) that a human could play against. In order to make a decision, the computer would use a MinMax tree to gauge the possible outcomes a couple of moves ahead. This project was a fun application of MinMax trees and my first attempt at Artifical Intelligence.</p>
 
 			<div class="page-header"><h3>Implementation<h3></div>
-
-			<p>While there are five Java files in total, the inner workings of the AI are within <a href= "java/Graph.java">Graph.java</a> and <a href= "java/Player.java">Player.java</a>. Graph.java contains a list of functions that allows the AI to interact with the Grid of Sim (Such as addEdge(), isEdge(), etc). 
-			</p>
-
-  			<div class="page-header"><h3>Results<h3></div>
+			<p>While there are five Java files in total, the inner workings of the AI are within <a href= "java/Graph.java">Graph.java</a> and <a href= "java/Player.java">Player.java</a>. Graph.java contains a list of functions that allows the AI to interact with the Grid of Sim (Such as addEdge(), isEdge(), etc). Player.java then uses these functions to establish a base move, and then in conjunction with a MinMax tree, look 'forward' and evaluate what move would be most advantageous for it. The evaluation function values traces down the tree based off of whether it is less likely to encounter cycles and whether the human is more likely to encounter cycles.</p>
+				
+  			<div class="page-header"><h3>Demo<h3></div>
 			<div class=" text-center">
-			
+				<p>Note: My mouse wasn't recorded in the video, but I (human) choose the red lines</p>
 			<iframe width="560" height="315" src="//www.youtube.com/embed/tT1r-gYFZh4" frameborder="0" allowfullscreen></iframe>
 			</div>
 
-  			<p>The initial data is messy. When compared to the graph of bitcoin value, a clear correlation is not evident.</p>
-  		    <p>&nbsp</p>
   		  	
 
-			<div class="page-header"><h3>Data<h3></div>
-			<p>Feel free to use our data. There are two text files that have json data dumped straight in them. Or you can use the csv file if you'd like an easier file format. Please attribute your work to <a href="https://github.com/sean-smith/BitcoinSentiment">this github repo</a>.</p>
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>The code for the visual component of Sim was written by Mads Rosendahl, University of Roskilde, Denmark (madsr@ruc.dk).</p>
 
   		</div>
-  		<div class="panel-footer"><a class="btn btn-primary btn-sm" href="#" role="button">Top</a></div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
   	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	</div>
 	
 	
 	<!-- Binary Bomb Section-->
-	<div class="panel panel-default" id="bomb">
-		<div class="container page-header">
+	<div id="bomb">	
+	<div class="container page-header">
+		<div class="panel panel-default">
   			<div class="panel-body">
-  			<div class="project-header text-center "><h1><u>Binary Bomb Comprehension</u><h1></div>
-				<p class="lead text-center"><a href= 'http://en.wikipedia.org/wiki/Sim_%28pencil_game%29' class= "has-success">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. <br> </p>
-			<div class="page-header"><h3>Abstract<h3></div>
+  			<div class="project-header text-center"><h1>Binary Bomb Comprehension<h1>
+			<a class="btn btn-md btn-info" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+				<p> <a href= "http://csapp.cs.cmu.edu/public/labs.html">The Binary Bomb</a> is a lab that is frequently used as a project for students to practice reading assembly as well as using debuggers. This is a comprehensive explanation for how to "defuse" the binary bomb.</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 				
-				<p>Sim Pencil AI was a project that originally began in one of my Computer Science courses at Boston University during my first year. While most of the things we had assigned were less exciting, I found the concept of Artifical Intelligence fastinating. This was also a wonderful example for applications of MinMax trees!</p>
-				
-			<div class="page-header"><h3>Methodology<h3></div>
+  			<div class="page-header"><h3>Demo<h3></div>
+			<p>*****I will be adding content here soon*****</p>
+  		  	
 
-				<p></p>
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 
-  			<div class="page-header"><h3>Results<h3></div>
-				<p>The initial data is messy. When compared to the graph of bitcoin value, a clear correlation is not evident.</p>
-  		    <p>&nbsp</p>
-  		  	<a href="https://raw.githubusercontent.com/sean-smith/BitcoinSentiment/master/Screen%20Shot%202014-10-08%20at%202.44.59%20PM.png" data-lightbox="bitcoin" data-title="Bitcoin Prices collected via the coinbase api."><img class="img-thumbnail" src="https://raw.githubusercontent.com/sean-smith/BitcoinSentiment/master/Screen%20Shot%202014-10-08%20at%202.44.59%20PM.png" alt="Bitcoin Prices"></a>
-  		  	<a href="https://raw.githubusercontent.com/sean-smith/BitcoinSentiment/master/Screen%20Shot%202014-10-08%20at%202.40.24%20PM.png" data-lightbox="bitcoin" data-title="Bitcoin Sentiment as collected by our scraping algorithm."><img class="img-thumbnail" src="https://raw.githubusercontent.com/sean-smith/BitcoinSentiment/master/Screen%20Shot%202014-10-08%20at%202.40.24%20PM.png" alt="Bitcoin Sentiment as collected by our scraping algorithm."></a>
-			
-
-
-				<p><img src="img/simRegPic.jpg" class="img-rounded" width="300" height="300"></a>
-
-			<div class="page-header"><h3>Data<h3></div>
-			<p>Feel free to use our data. There are two text files that have json data dumped straight in them. Or you can use the csv file if you'd like an easier file format. Please attribute your work to <a href="https://github.com/sean-smith/BitcoinSentiment">this github repo</a>.</p>
-			<div class="panel-footer"><a class="btn btn-primary btn-sm" href="#" role="button">Top</a></div>
-	  	</div>
-    	</div>
-	</div>
-			
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+  	</div>
+	
 	
 	<!--Medicost Section-->
-	<div class="panel panel-default" id="medicost">
-		<div class="container page-header">
+	<div id="medicost">	
+	<div class="container page-header">
+		<div class="panel panel-default">
   			<div class="panel-body">
-  			<div class="project-header text-center "><h1><u>Medicost</u><h1></div>
-				<p class="lead text-center"><a href= 'http://en.wikipedia.org/wiki/Sim_%28pencil_game%29' class= "has-success">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. <br> </p>
-			<div class="page-header"><h3>Abstract<h3></div>
+  			<div class="project-header text-center"><h1>Medicost<h1>
+			<a class="btn btn-md btn-info" href="https://github.com/NicoHinderling/Sim-Pencil-AI" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+			<p> *****I will be adding content here soon*****</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 				
-				<p>Sim Pencil AI was a project that originally began in one of my Computer Science courses at Boston University during my first year. While most of the things we had assigned were less exciting, I found the concept of Artifical Intelligence fastinating. This was also a wonderful example for applications of MinMax trees!</p>
-				
-			<div class="page-header"><h3>Methodology<h3></div>
+  			<div class="page-header"><h3>Demo<h3></div>
+			<p>*****I will be adding content here soon*****</p>
+			</div>
 
-				<p></p>
+  		  	
 
-  			<div class="page-header"><h3>Results<h3></div>
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>The code for the visual component of Sim was written by Mads Rosendahl, University of Roskilde, Denmark (madsr@ruc.dk).</p>
 
-
-				<p><img src="img/simRegPic.jpg" class="img-rounded" width="300" height="300"></a>
-
-			<div class="page-header"><h3>Data<h3></div>
-			<p>Feel free to use our data. There are two text files that have json data dumped straight in them. Or you can use the csv file if you'd like an easier file format. Please attribute your work to <a href="https://github.com/sean-smith/BitcoinSentiment">this github repo</a>.</p>
-			<div class="panel-footer"><a class="btn btn-primary btn-sm" href="#" role="button">Top</a></div>
-	  	</div>
-    	</div>
-	</div>
-		
-	<!--Power to the People Section-->
-	<div class="panel panel-default" id="legimail">
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+  	</div>
+	
+	
+	<!-- Legimail Section-->
+	<div id="legimail">	
 		<div class="container page-header">
+		<div class="panel panel-default">
   			<div class="panel-body">
-  			<div class="project-header text-center "><h1><u>Legimail</u><h1></div>
-				<p class="lead text-center"><a href= 'http://en.wikipedia.org/wiki/Sim_%28pencil_game%29' class= "has-success">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. <br> </p>
-			<div class="page-header"><h3>Abstract<h3></div>
+  			<div class="project-header text-center"><h1>Legimail<h1>
+			<a class="btn btn-md btn-info" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+				<p> *****I will be adding content here soon*****</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 				
-				<p>Sim Pencil AI was a project that originally began in one of my Computer Science courses at Boston University during my first year. While most of the things we had assigned were less exciting, I found the concept of Artifical Intelligence fastinating. This was also a wonderful example for applications of MinMax trees!</p>
-				
-			<div class="page-header"><h3>Methodology<h3></div>
+  			<div class="page-header"><h3>Demo<h3></div>
+			<p>*****I will be adding content here soon*****</p>
+  		  	
 
-				<p></p>
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 
-  			<div class="page-header"><h3>Results<h3></div>
-
-
-				<p><img src="img/simRegPic.jpg" class="img-rounded" width="300" height="300"></a>
-
-			<div class="page-header"><h3>Data<h3></div>
-			<p>Feel free to use our data. There are two text files that have json data dumped straight in them. Or you can use the csv file if you'd like an easier file format. Please attribute your work to <a href="https://github.com/sean-smith/BitcoinSentiment">this github repo</a>.</p>
-			<div class="panel-footer"><a class="btn btn-primary btn-sm" href="#" role="button">Top</a></div>
-	  	</div>
-    	</div>
-	</div>
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+</div>
 	
 	<!--Local Eats Section-->
-	<div class="panel panel-default" id="eats">
+	<div id="eats">	
 		<div class="container page-header">
+		<div class="panel panel-default">
   			<div class="panel-body">
-  			<div class="project-header text-center "><h1><u>Local Eats</u><h1></div>
-				<p class="lead text-center"><a href= 'http://en.wikipedia.org/wiki/Sim_%28pencil_game%29' class= "has-success">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. <br> </p>
-			<div class="page-header"><h3>Abstract<h3></div>
+  			<div class="project-header text-center"><h1>Local Eats<h1>
+			<a class="btn btn-md btn-info" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+				<p>*****I will be adding content here soon*****</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 				
-				<p>Sim Pencil AI was a project that originally began in one of my Computer Science courses at Boston University during my first year. While most of the things we had assigned were less exciting, I found the concept of Artifical Intelligence fastinating. This was also a wonderful example for applications of MinMax trees!</p>
-				
-			<div class="page-header"><h3>Methodology<h3></div>
+  			<div class="page-header"><h3>Demo<h3></div>
+			<p>*****I will be adding content here soon*****</p>
+  		  	
 
-				<p></p>
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 
-  			<div class="page-header"><h3>Results<h3></div>
-
-
-				<p><img src="img/simRegPic.jpg" class="img-rounded" width="300" height="300"></a>
-
-			<div class="page-header"><h3>Data<h3></div>
-			<p>Feel free to use our data. There are two text files that have json data dumped straight in them. Or you can use the csv file if you'd like an easier file format. Please attribute your work to <a href="https://github.com/sean-smith/BitcoinSentiment">this github repo</a>.</p>
-			<div class="panel-footer"><a class="btn btn-primary btn-sm" href="#" role="button">Top</a></div>
-	  	</div>
-    	</div>
-	</div>
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+</div>
 	
 	<!--Cabinet Section-->
-	<div class="panel panel-default" id="cabinet">
+	<div id="cabinet">	
 		<div class="container page-header">
+		<div class="panel panel-default">
   			<div class="panel-body">
-  			<div class="project-header text-center "><h1><u>Cabinet</u><h1></div>
-				<p class="lead text-center"><a href= 'http://en.wikipedia.org/wiki/Sim_%28pencil_game%29' class= "has-success">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. <br> </p>
-			<div class="page-header"><h3>Abstract<h3></div>
+  			<div class="project-header text-center"><h1>Cabinet<h1>
+			<a class="btn btn-md btn-info" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+				<p>*****I will be adding content here soon*****</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 				
-				<p>Sim Pencil AI was a project that originally began in one of my Computer Science courses at Boston University during my first year. While most of the things we had assigned were less exciting, I found the concept of Artifical Intelligence fastinating. This was also a wonderful example for applications of MinMax trees!</p>
-				
-			<div class="page-header"><h3>Methodology<h3></div>
+  			<div class="page-header"><h3>Demo<h3></div>
+			<p>*****I will be adding content here soon*****</p>
+  		  	
 
-				<p></p>
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>*****I will be adding content here soon*****</p>
 
-  			<div class="page-header"><h3>Results<h3></div>
-
-
-				<p><img src="img/simRegPic.jpg" class="img-rounded" width="300" height="300"></a>
-
-			<div class="page-header"><h3>Data<h3></div>
-			<p>Feel free to use our data. There are two text files that have json data dumped straight in them. Or you can use the csv file if you'd like an easier file format. Please attribute your work to <a href="https://github.com/sean-smith/BitcoinSentiment">this github repo</a>.</p>
-			<div class="panel-footer"><a class="btn btn-primary btn-sm" href="#" role="button">Top</a></div>
-	  	</div>
-    	</div>
-	</div>
-	
-	
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+</div>
+		
 	
 		
 	<!-- Footer for the page -->
