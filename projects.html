@@ -38,92 +38,65 @@
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <body id="page-top" class="index">
-
 	<div class="container">
 		<div class="row">
-		    <h1 class="section-heading text-center">My Projects</h1>
-			<div class="btn-group btn-group-justified" role="group">
-				<div class="btn-group" role="group">
-					<a href="#sim" class="btn btn-primary page-scroll">Sim Pencil AI</a>
-  				</div>
- 				<div class="btn-group" role="group">
-    				<a href="#bomb" class="btn btn-primary page-scroll">Binary Bomb</a>
-  				</div>
-  				<div class="btn-group" role="group">
-   					<a href="#medicost" class="btn btn-primary page-scroll">Medicost</a>
-  				</div>
-				<div class="btn-group" role="group">
-    				<a href="#legimail" class="btn btn-primary page-scroll">LegiMail</a>
-  				</div>
- 				<div class="btn-group" role="group">
-    				<a href="#eats" class="btn btn-primary page-scroll">Local Eats</a>
-  				</div>
-  				<div class="btn-group hassuccess" role="group">
-   					<a href="#cabinet" class="btn btn-primary page-scroll">Cabinet</a>
-  				</div>
-			</div>
-			</div>
-		</div>				
-	</div>				
+			<h1 class="section-heading text-center">My Projects</h1>
+				<div class="btn-group btn-group-justified" role="group">
+					<div class="btn-group" role="group">
+						<a href="#sim" class="btn btn-primary page-scroll">Sim Pencil AI</a>
+					</div>
+					<div class="btn-group" role="group">
+						<a href="#medicost" class="btn btn-primary page-scroll">Medicost</a>
+					</div>
+					<div class="btn-group" role="group">
+						<a href="#legimail" class="btn btn-primary page-scroll">LegiMail</a>
+					</div>
+					<div class="btn-group" role="group">
+						<a href="#eats" class="btn btn-primary page-scroll">Local Eats</a>
+					</div>
+					<div class="btn-group" role="group">
+						<a href="#cabinet" class="btn btn-primary page-scroll">Cabinet</a>
+					</div>
+				</div>
+				
+		</div>
+	</div>
 
 	<!-- Sim Pencil AI Section-->	
     <div id="sim">	
-	<div class="container page-header">
-		<div class="panel panel-default">
-  			<div class="panel-body">
-  			<div class="project-header text-center"><h1>Sim Pencil AI<h1>
-			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Sim-Pencil-AI" role="button">Project Source Code</a>
+		<div class="container page-header">
+			<div class="panel panel-default">
+				<div class="panel-body">
+
+					<!--Header-->
+						<div class="project-header text-center"><h1>Sim Pencil AI<h1>
+						<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Sim-Pencil-AI" role="button">Project Source Code</a>
+					</div>
+
+					<!--Overview-->
+					<div class="page-header"><h3>Overview<h3></div>
+					<p> <a href= "http://en.wikipedia.org/wiki/Sim_%28pencil_game%29">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. The objective of Sim Pencil AI was to create a "Computer Player" (<a href= "java/AiPlayer.java">Source Code</a>) that a human could play against. In order to make a decision, the computer would use a MinMax tree to gauge the possible outcomes a couple of moves ahead. This project was a fun application of MinMax trees and my first attempt at Artifical Intelligence.</p>
+
+					<!--Implementation-->
+					<div class="page-header"><h3>Implementation<h3></div>
+					<p>While there are five Java files in total, the inner workings of the AI are within <a href= "java/Graph.java">Graph.java</a> and <a href= "java/Player.java">Player.java</a>. Graph.java contains a list of functions that allows the AI to interact with the Grid of Sim (Such as addEdge(), isEdge(), etc). Player.java then uses these functions to establish a base move, and then in conjunction with a MinMax tree, look 'forward' and evaluate what move would be most advantageous for it. The evaluation function values traces down the tree based off of whether it is less likely to encounter cycles and whether the human is more likely to encounter cycles.</p>
+
+					<!--Demo-->
+					<div class="page-header"><h3>Demo<h3></div>
+					<div class=" text-center">
+						<p>Note: My mouse wasn't recorded in the video, but I (human) choose the red lines</p>
+						<iframe width="560" height="315" src="//www.youtube.com/embed/tT1r-gYFZh4" frameborder="0" allowfullscreen></iframe>
+						<p> Feel free to download the code and try it yourself! I plan to add this as an applet soon. </p>
+					</div>
+					<!--Disclaimer-->
+					<div class="page-header"><h3>Disclaimer<h3></div>
+					<p>The code for the visual component of Sim was written by Mads Rosendahl, University of Roskilde, Denmark (madsr@ruc.dk).</p>
+		  		</div>
+				<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
 			</div>
-			<div class="page-header"><h3>Overview<h3></div>
-				<p> <a href= "http://en.wikipedia.org/wiki/Sim_%28pencil_game%29">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. The objective of Sim Pencil AI was to create a "Computer Player" (<a href= "java/AiPlayer.java">Source Code</a>) that a human could play against. In order to make a decision, the computer would use a MinMax tree to gauge the possible outcomes a couple of moves ahead. This project was a fun application of MinMax trees and my first attempt at Artifical Intelligence.</p>
-
-			<div class="page-header"><h3>Implementation<h3></div>
-			<p>While there are five Java files in total, the inner workings of the AI are within <a href= "java/Graph.java">Graph.java</a> and <a href= "java/Player.java">Player.java</a>. Graph.java contains a list of functions that allows the AI to interact with the Grid of Sim (Such as addEdge(), isEdge(), etc). Player.java then uses these functions to establish a base move, and then in conjunction with a MinMax tree, look 'forward' and evaluate what move would be most advantageous for it. The evaluation function values traces down the tree based off of whether it is less likely to encounter cycles and whether the human is more likely to encounter cycles.</p>
-				
-  			<div class="page-header"><h3>Demo<h3></div>
-			<div class=" text-center">
-				<p>Note: My mouse wasn't recorded in the video, but I (human) choose the red lines</p>
-			<iframe width="560" height="315" src="//www.youtube.com/embed/tT1r-gYFZh4" frameborder="0" allowfullscreen></iframe>
-			</div>
-
-  		  	
-
-			<div class="page-header"><h3>Disclaimer<h3></div>
-			<p>The code for the visual component of Sim was written by Mads Rosendahl, University of Roskilde, Denmark (madsr@ruc.dk).</p>
-
-  		</div>
-  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
-  	</div>
+		</div>
 	</div>
 	
-	
-	<!-- Binary Bomb Section-->
-	<div id="bomb">	
-	<div class="container page-header">
-		<div class="panel panel-default">
-  			<div class="panel-body">
-  			<div class="project-header text-center"><h1>Binary Bomb Comprehension<h1>
-			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
-			</div>
-			<div class="page-header"><h3>Overview<h3></div>
-				<p> <a href= "http://csapp.cs.cmu.edu/public/labs.html">The Binary Bomb</a> is a lab that is frequently used as a project for students to practice reading assembly as well as using debuggers. This is a comprehensive explanation for how to "defuse" the binary bomb.</p>
-
-			<div class="page-header"><h3>Implementation<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-				
-  			<div class="page-header"><h3>Demo<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-  		  	
-
-			<div class="page-header"><h3>Disclaimer<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-
-  		</div>
-  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
-  	</div>
-  	</div>
 	
 	
 	<!--Medicost Section-->
@@ -135,20 +108,17 @@
 			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Sim-Pencil-AI" role="button">Project Source Code</a>
 			</div>
 			<div class="page-header"><h3>Overview<h3></div>
-			<p> *****I will be adding content here soon*****</p>
+			<p><a href="https://medicost.io">Medicost</a> is a simple search engine made for people with high deductible insurance plans, where users can enter their location and requested service, and compare prospective prices from physician to physician within their area. The engine utilizes nearly 2 GBs of national data from <a href="https://medicare.gov">Medicare.gov</a> to compare rates (this is because most high deductible insurance plans have similar financial characteristics). Medicost was created at the MIT Hacking Medicine Hackathon in order to combat the rampant problem of price transparency in the medical world.</p>
 
 			<div class="page-header"><h3>Implementation<h3></div>
-			<p>*****I will be adding content here soon*****</p>
+			<p>We began by converting our CSV data to JSON, and then uploading them to our <a href="https://firebase.com">Firebase</a> database by using their REST API. From here, we would be able to do quick and specific searches directly through the database. Next, we made the front-end component for where users would actually input their general location and requested procedure. While we had a plethora of data to consult, we tried to keep the themes of procedures (Ex: Cardiology, Physical Therapy, etc.) down to the 100 most relevant subjects. In order to make the experience even easier, we added a fuzzy search component to the engine, so that we could ensure users would be able to find what they were looking for. </p>
 				
   			<div class="page-header"><h3>Demo<h3></div>
-			<p>*****I will be adding content here soon*****</p>
+			<div class=" text-center">
+				<p>I will be adding a video demo here soon. For now, feel free to try the engine yourself at <a href="https://medicost.io">Medicost.io</a></p>
 			</div>
-
-  		  	
-
 			<div class="page-header"><h3>Disclaimer<h3></div>
-			<p>The code for the visual component of Sim was written by Mads Rosendahl, University of Roskilde, Denmark (madsr@ruc.dk).</p>
-
+			<p>Medicost was created by <a href="https://github.com/sean-smith">Sean Smith</a>, <a href="https://github.com/state299">David Neary</a>, <a href="https://github.com/rahul-nath">Rahul Nath</a>, and I. All the data used was from the 2011 American Medical Association.</p>
   		</div>
   		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
   	</div>
@@ -164,18 +134,8 @@
 			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
 			</div>
 			<div class="page-header"><h3>Overview<h3></div>
-				<p> *****I will be adding content here soon*****</p>
-
-			<div class="page-header"><h3>Implementation<h3></div>
-			<p>*****I will be adding content here soon*****</p>
+				<p>This is a work in progress. It will be released in Decemeber of 2014.</p>
 				
-  			<div class="page-header"><h3>Demo<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-  		  	
-
-			<div class="page-header"><h3>Disclaimer<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-
   		</div>
   		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
   	</div>
@@ -190,17 +150,7 @@
 			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
 			</div>
 			<div class="page-header"><h3>Overview<h3></div>
-				<p>*****I will be adding content here soon*****</p>
-
-			<div class="page-header"><h3>Implementation<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-				
-  			<div class="page-header"><h3>Demo<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-  		  	
-
-			<div class="page-header"><h3>Disclaimer<h3></div>
-			<p>*****I will be adding content here soon*****</p>
+				<p>This is a work in progress. It will be released in January of 2015.</p>
 
   		</div>
   		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
@@ -216,22 +166,15 @@
 			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Binary-Bomb-Comprehension" role="button">Project Source Code</a>
 			</div>
 			<div class="page-header"><h3>Overview<h3></div>
-				<p>*****I will be adding content here soon*****</p>
-
-			<div class="page-header"><h3>Implementation<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-				
-  			<div class="page-header"><h3>Demo<h3></div>
-			<p>*****I will be adding content here soon*****</p>
-  		  	
-
-			<div class="page-header"><h3>Disclaimer<h3></div>
-			<p>*****I will be adding content here soon*****</p>
+				<p>This is a work in progress. It will be released in March of 2015.</p>
 
   		</div>
   		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
   	</div>
 </div>
+
+<div class="panel-footer"><a class="btn btn-primary btn-md page-scroll" href="index.html" role="button">Back to Homepage</a></div>
+				
 		
 	
 		
