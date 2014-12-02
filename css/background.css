@@ -695,15 +695,16 @@ section h8.section-subheading {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url(../img/contactbackground.jpg); /*map-image.png*/
+    background-color: #f7f7f7;
+  /*background-image: url(../img/contactbackground.jpg); */
     background-position: center;
     background-repeat: no-repeat;
 }
-
+/*
 section#contact .section-heading {
     color: #fff;
 }
+*/
 
 section#contact .form-group {
     margin-bottom: 25px;
@@ -754,10 +755,10 @@ section#contact:-ms-input-placeholder {
     font-weight: 700;
     color: #bbb;
 }
-
+/*
 section#contact .text-danger {
     color: #e74c3c;
-}
+}*/
 
 footer {
     padding: 25px 0;
