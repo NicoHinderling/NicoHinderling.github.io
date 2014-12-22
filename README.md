@@ -1,6 +1,7 @@
 NicoHinderling.github.io
 ========================
 
-Code for my personal website
+This is the source code for my personal website: nicohinderling.me
 
-**More Updates coming Nov 28th**
+Preview:
+![alt tag](https://raw.github.com/NicoHinderling/NicoHinderling.github.io/blob/master/preview.png)
