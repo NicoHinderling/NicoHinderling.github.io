@@ -67,7 +67,7 @@
               e.preventDefault();
             }
             $form.addClass("error");
-            if ($.isFunction(settings.options.submitError)) {
+            if ($.isFunction(settings.options.submitError) == False) {
               settings.options.submitError($form, e, $inputs.jqBootstrapValidation("collectErrors", true));
             }
           } else {
@@ -527,11 +527,9 @@
 						if (createdElements.indexOf($helpBlock[0]) > -1) {
 							$helpBlock.remove();
 						}
-
-          }
-        );
-
-      },
+          			}
+        		);
+      		},	
       collectErrors : function(includeEmpty) {
 
         var errorMessages = {};
@@ -909,4 +907,4 @@
     $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this,arguments);
   };
 
-})( jQuery );
+  })( jQuery );
