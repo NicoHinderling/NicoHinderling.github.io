@@ -15,11 +15,10 @@ $message = $_POST['message'];
 	
 // Create the email and send the message
 $to = 'nicolas.hinderling@gmail.com'; // put your email
-$email_subject = "Contact form submitted by:  $name";
-$email_body = "You have received a new message. \n\n".
-				  " Here are the details:\n \nName: $name \n ".
-				  "Email: $email_address\n Message \n $message";
-$headers = "From: contacts@myprogrammingblog.com\n";
+$email_subject = "New Email From:  $name";
+$email_body = "Name: $name \n".
+				  "Email: $email_address\n\nMessage: \n$message";
+$headers = "From: noreply@nicohinderling.me\n";
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
