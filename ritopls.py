@@ -1,3 +1,8 @@
+# This kind of implementation works!
+# Each time it runs, it will output the prioritized set. Remove it from inputted data
+# Just run it recursively until there are no remaining data inputs
+
+
 import sys
 
 class Interval:
@@ -88,10 +93,5 @@ while(maxx != 0 and reference[index] != -1):    #This will take at most O(n)
 
 rev = processes[::-1]
 
-'''
- This is where I had to stop! I would then use these
- intervals to go back and select the most severe for each interval of change
-'''
-
-# for x in rev:
-#     print(x)
+for x in rev:
+    print(x)
