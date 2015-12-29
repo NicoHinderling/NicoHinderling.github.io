@@ -1,0 +1,3 @@
+Use http://tholman.com/intense-images/ for photos.nicohinderling.com / photography.nicohinderling.com
+
+To config a subdomain with namecheap, add a new host record ("A Record"), the name of it, and the IP of the machine to host the photo web server!
