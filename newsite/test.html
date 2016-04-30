@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Musical Keyboard - JS Dynamic Audio Synth</title>
+<meta name="description" content="A keyboard! Play with it. ;) A synthesizer created entirely in HTML5 + JS that dynamically generates modulated Waveform Audio dataURIs." />
+<meta name="keywords" content="keith, keith horwood, keithwhor, social media, uwo, westernu, start-up, corporation, CEO, science, technology, blog, youtube, dataURI, javascript, JS, java, HTML5, piano, keyboard, HTML5 piano, HTML5 keyboard, waveform audio, .wav, .wav audio, audio" />
+<meta name="author" content="Keith William Horwood" />
+<meta name="robots" content="index,follow,archive" />
+<meta property="og:description" content="A keyboard! Play with it. ;) A synthesizer created entirely in HTML5 + JS that dynamically generates modulated Waveform Audio dataURIs." />
+<meta property="og:image" content="http://keithwhor.com/music/opengraph.png" />
+<link href="keyboard.css" rel="stylesheet">
+<script src="audiosynth.js"></script>
+<script src="audiosynth.view.js"></script>
+
+</head>
+
+<body>
+<div class="keyboard-options">
+Sound
+  <select ID="sound">
+  	<option value="0" selected>Keyboard</option>
+  	<option value="1">Organ</option>
+      <option value="2">Acoustic Guitar</option>
+      <option value="3">EDM, bro!</option>
+  </select>
+</div>
+<div ID="keyboard" class="keyboard-holder"></div>
+<div class="keyboard-options">
+Range [C<span ID="OCTAVE_LOWER">3</span>-B<span ID="OCTAVE_UPPER">5</span>]
+<input type="button" ID="-_OCTAVE" value="-" />
+<input type="button" ID="+_OCTAVE" value="+" /><br />
+<i>(Use left/right arrows to adjust with keyboard)</i>
+</div>
+
+<script type="text/javascript">
+
+var a = new AudioSynthView();
+a.draw();
+
+</script>
+</body>
+</html>
