@@ -7,7 +7,7 @@ hr { margin-top: 0px !important }
   width: 70%;
   margin-left: 6%;
   margin-right: 6%;
-  margin-top: 50px;
+  margin-top: 20px;
   overflow: hidden;
 }
 
@@ -64,9 +64,15 @@ hr { margin-top: 0px !important }
   color: #000000;
 }
 
+.main-black-24 {
+  font-size: 24px;
+  color: #000000;
+}
+
+
 .main-content {
-    margin-right: 250px;
-    text-align: center;
+  margin-right: 250px;
+  text-align: center;
 }
 
 .more-info {
@@ -83,4 +89,23 @@ hr { margin-top: 0px !important }
 .more-info:hover {
   text-decoration: none;
   background-color: #d9d9d9;
+}
+
+.more-info-revealed {
+  margin: 30px auto;
+  color: #000000;
+  padding: 5px 15px 5px 15px;
+  background-color: #F2F2F2;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.revealed-text {
+  text-align: left;
+  font-size: 14px;
+}
+
+.controls {
+  padding-left: 3em;
 }

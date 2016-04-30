@@ -54,12 +54,11 @@
 
 
 .black-keyboard {
+  margin: 0 auto;
   background: #000000;
   border: 1px solid #979797;
   border-radius: 8px;
   padding-top: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
   width: 900px;
 }
 
