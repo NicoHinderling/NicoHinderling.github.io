@@ -14,6 +14,7 @@
         <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
         <script src="audiosynth.js"></script>
         <script src="audiosynth.view.js"></script>
+        <script src="audiosynth.nico.js"></script>
         <link href="keyboard.css" rel="stylesheet">
         <script src="more-info.js"></script>
         <script>
@@ -29,8 +30,8 @@
     <body>
         <div id="sidebar">
             <div class="text-center">
-                <a href="index.html"><h1 class="sidebar-blue-18">Hi, I'm Nico!</h1></a>
-                <img src="img/profile-picture.jpg" class="img-circle profile-pic">
+                <h1 class="sidebar-blue-18">Hi, I'm Nico!</h1>
+                <a href="index.html"><img src="img/profile-picture.jpg" class="img-circle profile-pic"></a>
             </div>
             <div class="sidebar-group">
                 <h1 class="sidebar-blue-16">I'm a ...</h1>
@@ -71,19 +72,17 @@
                         <!-- <option value="3">EDM, bro!</option> -->
                     </select>
                 </div>
-                <div class="keyboard-wrapper">
-                    <div class="black-keyboard">
-                        <div class="beat">
-                            <a class="button-text" href="#" ><div id="test" class="beat-button">&nbsp;</div>&nbsp;Gimme a beat</a>
-                        </div>
-                        <div class="play">
-                            <a class="button-text" href="#" ><div class="play-button"><img class="play-img" src="img/play.png"></div>&nbsp;Play</a>
-                        </div>
-                        <div class="record">
-                            <a class="button-text" href="#" ><div class="record-button">&nbsp;</div>&nbsp;Record</a>
-                        </div>
-                        <div ID="keyboard" class="keyboard-holder"></div>
+                <div class="black-keyboard">
+                    <div id="beat" class="beat">
+                        <a class="button-text no-hover" href="#" ><div id="test" class="beat-button"></div>Gimme a beat</a>
                     </div>
+                    <div id="play" class="play">
+                        <a class="button-text no-hover" href="#" ><div class="play-button"><img class="play-img" src="img/play.png"></div>Play</a>
+                    </div>
+                    <div id="record" class="record">
+                        <a class="button-text no-hover" href="#" ><div class="record-button"></div>Record</a>
+                    </div>
+                    <div ID="keyboard" class="keyboard-holder"></div>
                 </div>
                 <h1 class="keyboard-credit">Partial credit to <a href="http://www.keithwhor.com/">Keith Horwood</a></h1>
                 <div class="keyboard-options">
