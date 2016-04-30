@@ -52,6 +52,10 @@
   
   .image { border: 1px solid rgba(32,32,32,0.2); color: rgb(32,32,32); font-family: Courier New, Courier, monospace; font-size: 12px; white-space:pre; padding: 10px; margin: 10px; text-align: center; }
 
+.keyboard-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .black-keyboard {
   margin: 0 auto;
