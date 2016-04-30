@@ -7,6 +7,10 @@ h2 {
   text-decoration: none;
 }
 
+a:link, a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+}
+
 .blue:hover {
   color: #2483db;
 }
@@ -15,7 +19,7 @@ h2 {
     display: inline-block;
     width: 242px;
     min-height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #F2F2F2;
@@ -58,7 +62,7 @@ h2 {
 }
 
 .copyright-div {
-  margin-top: 190px;
+  margin-top: 50px;
 }
 
 .copyright-text {

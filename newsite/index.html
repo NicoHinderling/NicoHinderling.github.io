@@ -15,7 +15,7 @@
         <script src="audiosynth.js"></script>
         <script src="audiosynth.view.js"></script>
         <link href="keyboard.css" rel="stylesheet">
-        <script src=".js"></script>
+        <script src="more-info.js"></script>
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,16 +34,16 @@
             </div>
             <div class="sidebar-group">
                 <h1 class="sidebar-blue-16">I'm a ...</h1>
-                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="bu.edu">CS Major at Boston University (Class 2017)</a></h1>
-                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="uber.com">Intern at Uber (2016)</a></h1>
-                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="gigster.com">Freelancer for Gigster</a></h1>
+                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="http://bu.edu">CS Major at Boston University (Class 2017)</a></h1>
+                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="http://uber.com">Intern at Uber (2016)</a></h1>
+                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="http://gigster.com">Freelancer for Gigster</a></h1>
                 <h1 class="sidebar-blue-16 indented">- Aspiring ”Funny Guy”</h1>
             </div>
             <div class="sidebar-group">
                 <h1 class="sidebar-blue-16">Check out my...</h1>
-                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="github.nicohinderling.com">Github</a></h1>
-                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="linkedin.nicohinderling.com">Linkedin</a></h1>
-                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="resume.nicohinderling.com">Resume</a></h1>
+                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="http://github.nicohinderling.com">Github</a></h1>
+                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="http://linkedin.nicohinderling.com">Linkedin</a></h1>
+                <h1 class="sidebar-blue-16 indented">- <a class="blue" href="http://resume.nicohinderling.com">Resume</a></h1>
                 <h1 class="sidebar-blue-16 indented">- <a class="blue" href="#">Photography (soon!)</a></h1>
             </div>
             <div class="copyright-div">
@@ -68,7 +68,7 @@
                         <option value="0" selected>Keyboard</option>
                         <option value="1">Organ</option>
                         <option value="2">Acoustic Guitar</option>
-                        <option value="3">EDM, bro!</option>
+                        <!-- <option value="3">EDM, bro!</option> -->
                     </select>
                 </div>
                 <div class="black-keyboard">
@@ -90,8 +90,8 @@
                 <input type="button" ID="+_OCTAVE" value="+" /><br />
                 <i>(Use left/right arrows to adjust with keyboard)</i>
                 </div>
-                <a href="#" class="more-info">More info</a>
-                <div class="more-info-revealed"><h1 class="revealed-text">
+                <div id="more-info"><a href="#" class="more-info">More info</a></div>
+                <div id="more-info-revealed" class="more-info-revealed"><h1 class="revealed-text">
                     Controls: <br>
                     <span class="controls">- Use your keyboard to play the corresponding notes<br></span>
                     <span class="controls">- Click the record button (max 10 secs) and play the piano!<br></span>
