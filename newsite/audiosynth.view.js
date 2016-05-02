@@ -220,6 +220,7 @@ function AudioSynthView() {
             '<span name="OCTAVE_LABEL" value="' + i + '">' + (__octave + parseInt(i)) + '</span>' + (n.substr(1,1)?n.substr(1,1):'');
           thisKey.appendChild(label);
           thisKey.setAttribute('ID', 'KEY_' + n + ',' + i);
+          // thisKey.setAttribute("onclick", "keyPress(this)");
           thisKey.addEventListener(evtListener[0], (function(_temp) { return function() { fnPlayKeyboard({keyCode:_temp}); } })(reverseLookup[n + ',' + i]));
           visualKeyboard[n + ',' + i] = thisKey;
           visualKeyboard.appendChild(thisKey);
@@ -236,6 +237,10 @@ function AudioSynthView() {
 
   // Creates our audio player
   var fnPlayNote = function(note, octave) {
+    // console.log(note);
+    // console.log(octave);
+    var recoredTime = new Date().getTime();
+    recordedKeysClicks.push({note: note, octave: octave, when: recoredTime});
 
     src = __audioSynth.generate(selectSound.value, note, octave, 2);
     container = new Audio(src);
@@ -349,7 +354,8 @@ function AudioSynthView() {
   }
 
   var fnPlaySong = function(arr) {
-  
+    // console.log("CALLED!");
+    // console.log(arr);
     if(arr.length>0) {
     
       var noteLen = 1000*(1/parseInt(arr[0][1]));
@@ -369,8 +375,68 @@ function AudioSynthView() {
   
   };
 
-  // Set up global event listeners
+  // Drum Beat!
+  var drumbeatMP3 = document.getElementById('drumbeatMP3');
+  var fnBeat = function () {
+      if (drumbeatMP3.paused) {
+        drumbeatMP3.play();
+      }else{
+        drumbeatMP3.pause();
+        drumbeatMP3.currentTime = 0
+      }
+  };
 
+  drumbeatMP3.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+  }, false);
+
+  document.getElementById('beatButton').addEventListener('click', function() { fnBeat() });
+
+
+
+  // Recording!
+  var recordedKeysClicks = [];
+
+  fnRecord = function () {
+    // if()
+    if(document.getElementById('recordButton').style.color == 'red') {
+      document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Record';
+      document.getElementById('recordButton').style.color = '#ffffff';
+      recordedKeysClicks = [];
+    } else {
+      recordedKeysClicks = [];
+      var start = new Date().getTime();
+      document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Recording';
+      document.getElementById('recordButton').style.color = 'red';
+      setTimeout(function () {
+        for(i = 0; i < recordedKeysClicks.length; i++){
+          console.log(recordedKeysClicks.shift());
+        }
+      document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Record';
+      document.getElementById('recordButton').style.color = '#ffffff';
+      }, 2000);
+    }
+  };
+
+  document.getElementById('recordButton').addEventListener('click', function() { fnRecord() });
+
+
+
+  // Playing!
+  fnPlay = function () {
+    if(recordedKeysClicks.length == 0) {
+      alert("nothing recorded");
+    } else {
+      alert("playing");
+    }
+  };
+
+  document.getElementById('playButton').addEventListener('click', function() { fnPlay() });
+
+
+
+  // Set up global event listeners
   window.addEventListener('keydown', fnPlayKeyboard);
   window.addEventListener('keyup', fnRemoveKeyBinding);
   document.getElementById('-_OCTAVE').addEventListener('click', function() { fnChangeOctave(-1); });
