@@ -157,3 +157,8 @@
 .keyboard-credit {
   font-size: 14px;
 }
+
+.errorText {
+  color: red;
+  font-size: 20px;
+}

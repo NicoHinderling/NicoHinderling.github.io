@@ -437,8 +437,9 @@ function AudioSynthView() {
   // Playing!
   fnPlay = function () {
     if(recordedKeysClicks.length == 0) {
-      alert("Please record something.");
+      $('#recordError').show();
     } else {
+      $('#recordError').hide();
       for(i = 0; i < recordedKeysClicks.length; i++){
         playHelper(recordedKeysClicks[i].note, recordedKeysClicks[i].octave, recordedKeysClicks[i].when - playStartTime);
       };

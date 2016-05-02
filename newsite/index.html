@@ -70,6 +70,7 @@
                         <option value="2">Acoustic Guitar</option>
                     </select>
                 </div>
+                <h1 id="recordError" class="errorText">Please record something first!</h1>
                 <div class="black-keyboard">
                     <div id="beat" class="beat">
                         <a id="beatButton" class="button-text no-hover"><div class="beat-button"></div>Gimme a beat</a>
@@ -102,6 +103,8 @@
             </div>
         </div>
         <script type="text/javascript">
+            $('#recordError').hide();
+
             var a = new AudioSynthView();
             a.draw();
         </script>
