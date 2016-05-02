@@ -77,7 +77,6 @@ hr { margin-top: 0px !important }
 
 .more-info {
   font-size: 16px;
-  margin: 0 auto;
   color: #000000;
   padding: 5px 15px 5px 15px;
   background-color: #F2F2F2;
@@ -86,13 +85,17 @@ hr { margin-top: 0px !important }
   width: 100px;
 }
 
+#more-info {
+  margin-bottom: 20px;
+}
+
 .more-info:hover {
   text-decoration: none;
   background-color: #d9d9d9;
 }
 
 .more-info-revealed {
-  margin: 30px auto;
+  margin: 20px auto;
   color: #000000;
   padding: 5px 15px 5px 15px;
   background-color: #F2F2F2;

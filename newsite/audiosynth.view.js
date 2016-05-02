@@ -239,8 +239,10 @@ function AudioSynthView() {
   var fnPlayNote = function(note, octave) {
     // console.log(note);
     // console.log(octave);
-    var recoredTime = new Date().getTime();
-    recordedKeysClicks.push({note: note, octave: octave, when: recoredTime});
+    if(document.getElementById('recordButton').style.color == 'red'){
+      var recoredTime = new Date().getTime();
+      recordedKeysClicks.push({note: note, octave: octave, when: recoredTime});
+    }
 
     src = __audioSynth.generate(selectSound.value, note, octave, 2);
     container = new Audio(src);
@@ -396,39 +398,51 @@ function AudioSynthView() {
 
 
   // Recording!
+  var playStartTime = 0;
+  var wasBeatOn = true;
   var recordedKeysClicks = [];
 
   fnRecord = function () {
-    // if()
     if(document.getElementById('recordButton').style.color == 'red') {
       document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Record';
       document.getElementById('recordButton').style.color = '#ffffff';
-      recordedKeysClicks = [];
     } else {
+
       recordedKeysClicks = [];
-      var start = new Date().getTime();
+      playStartTime = new Date().getTime();
+      if (drumbeatMP3.paused) {
+        wasBeatOn = false;
+      } else {
+        wasBeatOn = true;
+      }
+
       document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Recording';
       document.getElementById('recordButton').style.color = 'red';
       setTimeout(function () {
-        for(i = 0; i < recordedKeysClicks.length; i++){
-          console.log(recordedKeysClicks.shift());
-        }
-      document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Record';
-      document.getElementById('recordButton').style.color = '#ffffff';
-      }, 2000);
+        document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Record';
+        document.getElementById('recordButton').style.color = '#ffffff';
+      }, 8000);
     }
   };
 
   document.getElementById('recordButton').addEventListener('click', function() { fnRecord() });
 
 
+  playHelper = function (note, octave, when) {
+    setTimeout(function () {
+      fnPlayNote(note, octave);
+    }, when);
+  };
 
   // Playing!
   fnPlay = function () {
     if(recordedKeysClicks.length == 0) {
-      alert("nothing recorded");
+      alert("Please record something.");
     } else {
-      alert("playing");
+      for(i = 0; i < recordedKeysClicks.length; i++){
+        playHelper(recordedKeysClicks[i].note, recordedKeysClicks[i].octave, recordedKeysClicks[i].when - playStartTime);
+      };
+      console.log(recordedKeysClicks);
     }
   };
 
