@@ -1,10 +1,10 @@
 @media only screen and (max-device-width: 480px) {
+  body {
+    background-color: #F2F2F2;
+  }
   #sidebar {
       width: 100%;
       position: relative;
-      top: 0;
-      left: 0;
-      background-color: #F2F2F2;
   }
   #main {
       width: 100%;
