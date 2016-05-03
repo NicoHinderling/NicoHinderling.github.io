@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Nico Hinderling</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	
+    <!-- Bootstrap Core CSS -->
+	
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	 <!-- Custom CSS -->
+	 <link href="css/background.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" class="index">
+  
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-57242361-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
+	<div class="container">
+		<div class="row">
+			<h1 class="section-heading text-center">My Projects</h1>
+				<div class="btn-group btn-group-justified" role="group">
+					<div class="btn-group" role="group">
+						<a href="#cm4d" class="btn btn-primary page-scroll">Web Worker</a>
+					</div>
+					<div class="btn-group" role="group">
+						<a href="#medicost" class="btn btn-primary page-scroll">Medicost</a>
+					</div>
+					<div class="btn-group" role="group">
+						<a href="#sim" class="btn btn-primary page-scroll">Sim Pencil AI</a>
+					</div>
+				</div>
+				
+		</div>
+	</div>
+	
+	
+	<!--CM4D Section-->
+	<div id="cm4d">	
+	<div class="container page-header">
+		<div class="panel panel-default">
+  			<div class="panel-body">
+  			<div class="project-header text-center"><h1>Web Worker (aka CM4D)<h1>
+			<a class="btn btn-md btn-success" href="https://github.com/allanlw/pennapps15" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+			<p>CM4D is a crowd-sourcing web application that works on almost every device. By harnessing the excess power of your CPU, CM4D performs computations and gives you Bitcoins in return. This project was built at Pennapps 2015 with the intention of creating a business model like <a href="http://aws.amazon.com/lambda/">AWS Lambda</a>, yet providing these computational capabilties with the power of our users.</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>While most of this was built on Node.js, we also used <a href="http://www.mongodb.org/">MongoDB</a> and <a href="http://expressjs.com/">Express</a>. Through sockets, jobs can be deployed out to connected users. These computations are performed, followed by the result being returned via the socket. From a connected user's perspective, it will perform jobs submitted, receiving Bitcoins in exchange for the service. Feel free to try it out by following the instructions on the README! </p>
+			
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>CM4D was created by <a href="https://github.com/allanlw">Allan Wirth</a>, <a href="https://github.com/huyle333">Huy Le</a>, <a href="https://github.com/winstonchen">Winston Chen</a>, and I.</p>
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+  	</div>
+	
+	
+	<!--Medicost Section-->
+	<div id="medicost">	
+	<div class="container page-header">
+		<div class="panel panel-default">
+  			<div class="panel-body">
+  			<div class="project-header text-center"><h1>Medicost<h1>
+			<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Medicost" role="button">Project Source Code</a>
+			</div>
+			<div class="page-header"><h3>Overview<h3></div>
+			<p>Medicost is a simple search engine made for people with high deductible insurance plans, where users can enter their location and requested service, and compare prospective prices from physician to physician within their area. The engine utilizes nearly 2 GBs of national data from <a href="https://medicare.gov">Medicare.gov</a> to compare rates (this is because most high deductible insurance plans have similar financial characteristics). Medicost was created at the MIT Hacking Medicine Hackathon in order to combat the rampant problem of price transparency in the medical world.</p>
+
+			<div class="page-header"><h3>Implementation<h3></div>
+			<p>We began by converting our CSV data to JSON, and then uploading them to our <a href="https://firebase.com">Firebase</a> database by using their REST API. From here, we would be able to do quick and specific searches directly through the database. Next, we made the front-end component for where users would actually input their general location and requested procedure. While we had a plethora of data to consult, we tried to keep the themes of procedures (Ex: Cardiology, Physical Therapy, etc.) down to the 100 most relevant subjects. In order to make the experience even easier, we added a fuzzy search component to the engine, so that we could ensure users would be able to find what they were looking for.</p>
+				
+			<div class="page-header"><h3>Disclaimer<h3></div>
+			<p>Medicost was created by <a href="https://github.com/sean-smith">Sean Smith</a>, <a href="https://github.com/state299">David Neary</a>, <a href="https://github.com/rahul-nath">Rahul Nath</a>, and I. All the data used was from the 2011 American Medical Association.</p>
+  		</div>
+  		<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+  	</div>
+  	</div>
+	
+	<!-- Sim Pencil AI Section-->	
+    <div id="sim">	
+		<div class="container page-header">
+			<div class="panel panel-default">
+				<div class="panel-body">
+
+					<!--Header-->
+						<div class="project-header text-center"><h1>Sim Pencil AI<h1>
+						<a class="btn btn-md btn-success" href="https://github.com/NicoHinderling/Sim-Pencil-AI" role="button">Project Source Code</a>
+					</div>
+
+					<!--Overview-->
+					<div class="page-header"><h3>Overview<h3></div>
+					<p> <a href= "http://en.wikipedia.org/wiki/Sim_%28pencil_game%29">Sim</a> is a game where players take turns drawing lines from point to point. The object of the game is to avoid making a triangle with your own lines. The objective of Sim Pencil AI was to create a "Computer Player" (<a href= "java/AiPlayer.java">Source Code</a>) that a human could play against. In order to make a decision, the computer would use a MinMax tree to gauge the possible outcomes a couple of moves ahead. This project was a fun application of MinMax trees and my first attempt at Artifical Intelligence.</p>
+
+					<!--Implementation-->
+					<div class="page-header"><h3>Implementation<h3></div>
+					<p>While there are five Java files in total, the inner workings of the AI are within <a href= "java/Graph.java">Graph.java</a> and <a href= "java/Player.java">Player.java</a>. Graph.java contains a list of functions that allows the AI to interact with the Grid of Sim (Such as addEdge(), isEdge(), etc). Player.java then uses these functions to establish a base move, and then in conjunction with a MinMax tree, look 'forward' and evaluate what move would be most advantageous for it. The evaluation function values traces down the tree based off of whether it is less likely to encounter cycles and whether the human is more likely to encounter cycles.</p>
+
+					<!--Demo-->
+					<div class="page-header"><h3>Demo<h3></div>
+					<div class=" text-center">
+						<p>Note: My mouse wasn't recorded in the video, but I (human) choose the red lines</p>
+						<iframe width="560" height="315" src="//www.youtube.com/embed/tT1r-gYFZh4" frameborder="0" allowfullscreen></iframe>
+						<p> Feel free to download the code and try it yourself! </p>
+					</div>
+					<!--Disclaimer-->
+					<div class="page-header"><h3>Disclaimer<h3></div>
+					<p>The code for the visual component of Sim was written by Mads Rosendahl, University of Roskilde, Denmark (madsr@ruc.dk).</p>
+		  		</div>
+				<div class="panel-footer"><a class="btn btn-primary btn-sm page-scroll" href="#page-top" role="button">Top</a></div>
+			</div>
+		</div>
+	</div>
+	
+	
+<!-- Return to Homepage -->
+ <div class="container text-center">
+	<div class="col-md-12">
+		<a class="btn btn-primary btn-md page-scroll" href="index.html" role="button">Back to Homepage</a>
+	</div>
+</div>
+	
+	<!-- Footer for the page -->
+    <footer>
+        <div class="container">
+			<div class="col-md-4">
+					<ul class="list-inline quicklinks">
+                    <li>Copyright &copy; Nicolas Hinderling 2015</li>
+					</ul>
+                </div>
+			<div class="col-md-4">
+			</div>
+				<div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+						<li><a href="http://startbootstrap.com/">Agency</a></li>
+						<li> </li>
+						<li><a href="http://www.apache.org/licenses/LICENSE-2.0">Terms of Use</a></li>
+					</ul>
+                </div>
+			</div>
+		</footer>
+	
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/background.js"></script>
+
+</body>
+</html>
