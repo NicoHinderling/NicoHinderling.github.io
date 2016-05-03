@@ -159,6 +159,16 @@
 }
 
 .errorText {
-  color: red;
-  font-size: 20px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.errorDiv {
+  margin: 0 auto;
+  /*width: 20%;*/
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+  background-color: red;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
 }

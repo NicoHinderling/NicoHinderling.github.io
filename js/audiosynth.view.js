@@ -403,6 +403,7 @@ function AudioSynthView() {
   var recordedKeysClicks = [];
 
   fnRecord = function () {
+    $('#recordError').hide();
     if(document.getElementById('recordButton').style.color == 'red') {
       document.getElementById('recordButton').innerHTML = '<div class="record-button"></div>Record';
       document.getElementById('recordButton').style.color = '#ffffff';
@@ -439,7 +440,6 @@ function AudioSynthView() {
     if(recordedKeysClicks.length == 0) {
       $('#recordError').show();
     } else {
-      $('#recordError').hide();
       for(i = 0; i < recordedKeysClicks.length; i++){
         playHelper(recordedKeysClicks[i].note, recordedKeysClicks[i].octave, recordedKeysClicks[i].when - playStartTime);
       };
