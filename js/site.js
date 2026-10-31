@@ -4,9 +4,9 @@
   var MENU = {
     title: "Nico Hinderling's site",
     items: [
-      { label: "GitHub", href: "http://github.nicohinderling.com" },
-      { label: "LinkedIn", href: "http://linkedin.nicohinderling.com" },
-      { label: "Resume (2023)", href: "http://resume.nicohinderling.com" },
+      { label: "GitHub", href: "https://github.com/NicoHinderling" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/nicohinderling" },
+      { label: "Resume (2023)", href: "/NicoHinderling_resume_2023.pdf" },
       { label: "Fun zone", text: '<p>From messing around lately...</p><a class="callout" href="https://casinoteacher.app"><b>casinoteacher.app</b><span>Learn blackjack, roulette, craps, poker and baccarat for free. No real money.</span></a>' }
     ]
   };
