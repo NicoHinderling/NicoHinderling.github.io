@@ -1,3 +1,6 @@
+/* VT323 by Peter Hull, SIL Open Font License 1.1 */
+@font-face { font-family: VT323; src: url(../fonts/VT323.woff2) format("woff2"); font-display: block; }
+
 :root { --lcd: #c3ccb6; --ink: #1b2318; }
 
 * { box-sizing: border-box; }
